@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_PresentationLayer", "01_PresentationLayer", "{7291A170-5E62-40EC-AFCE-FADEC3C40BCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_ApplicationLayer", "02_ApplicationLayer", "{7E1FED62-7DA5-434E-8CDC-3B790A019756}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_DomainLayer", "03_DomainLayer", "{F6B5B202-C65E-4D71-886B-F057CA8FA4A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_InfrastructureLayer", "04_InfrastructureLayer", "{166532FF-659E-4535-A647-1A6D1B9280EA}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5A63206-C674-4061-88E5-091F8367C1CC}
+	EndGlobalSection
+EndGlobal
