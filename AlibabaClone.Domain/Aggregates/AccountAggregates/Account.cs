@@ -13,9 +13,9 @@ namespace AlibabaClone.Domain.Aggregates.AccountsAggregates
         public Guid PersonId { get; set; }
         public required string PhoneNumber { get; set; }
         public required string Password { get; set; }
-        public string? Username { get; set; }
         public string? Email { get; set; }
 
         public virtual Person? Person { get; set; }
+        public virtual ICollection<TransactionAggregates.Coupon>? Coupons { get; set; }
     }
 }
