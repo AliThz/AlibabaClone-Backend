@@ -18,15 +18,15 @@ namespace AlibabaClone.Infrastructure.Configurations.AccountConfigurations
 
             builder.Property(a => a.PhoneNumber)
                    .IsRequired()
-                   .HasMaxLength(11);
+                   .HasMaxLength(13);
 
             builder.Property(a => a.Password)
                    .IsRequired()
-                   .HasMaxLength(100);
+                   .HasMaxLength(63);
 
 
             builder.Property(a => a.Email)
-                   .HasMaxLength(100);
+                   .HasMaxLength(255);
 
             builder.HasOne(a => a.Person)
                    .WithMany(p => p.Accounts)
