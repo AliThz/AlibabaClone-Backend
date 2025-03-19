@@ -18,12 +18,12 @@ namespace AlibabaClone.Infrastructure.Configurations.AccountConfigurations
 
             builder.HasOne<Account>()
                    .WithMany()
-                   .HasForeignKey(ar => ar.RoleId)
+                   .HasForeignKey(ar => ar.AccountId)
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne<Role>()
                    .WithMany()
-                   .HasForeignKey(ar => ar.AccountId)
+                   .HasForeignKey(ar => ar.RoleId)
                    .OnDelete(DeleteBehavior.Restrict);
         }
     }
