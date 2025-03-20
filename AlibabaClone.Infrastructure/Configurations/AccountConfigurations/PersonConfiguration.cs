@@ -39,9 +39,21 @@ namespace AlibabaClone.Infrastructure.Configurations.AccountConfigurations
                    .IsUnicode(false)
                    .HasMaxLength(63);
 
-            builder.Property(p => p.IdNumber)
+            builder.Property(p => p.EnglishLastName)
                    .IsUnicode(false)
                    .HasMaxLength(63);
+
+            builder.Property(p => p.EnglishLastName)
+                   .IsUnicode(false)
+                   .HasMaxLength(63);
+
+            builder.Property(p => p.BirthDate)
+                   .HasColumnType("date");
+
+            builder.HasOne(p => p.Gender)
+                   .WithMany()
+                   .HasForeignKey(p => p.GenderId)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
