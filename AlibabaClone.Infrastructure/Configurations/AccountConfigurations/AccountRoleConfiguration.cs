@@ -14,7 +14,7 @@ namespace AlibabaClone.Infrastructure.Configurations.AccountConfigurations
         public void Configure(EntityTypeBuilder<AccountRole> builder)
         {
             builder.ToTable("AccountRole");
-            builder.HasKey(ar => new {ar.AccountId, ar.RoleId})
+            builder.HasKey(ar => new { ar.AccountId, ar.RoleId });
 
             builder.HasOne<Account>()
                    .WithMany()
