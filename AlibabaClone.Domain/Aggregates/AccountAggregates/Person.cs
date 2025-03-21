@@ -14,7 +14,7 @@ namespace AlibabaClone.Domain.Aggregates.AccountsAggregates
         public required string LastName { get; set; }
         public required string IdNumber { get; set; }
         public DateTime BirthDate { get; set; }
-        public byte GenderId { get; set; }
+        public short GenderId { get; set; }
         public string? PassportNumber { get; set; }
         public string? EnglishFirstName { get; set; }
         public string? EnglishLastName { get; set; }

@@ -25,7 +25,7 @@ namespace AlibabaClone.Infrastructure.Configurations.TransportationConfiguration
             builder.Property(t => t.CompanyId)
                    .IsRequired();
 
-            builder.Property(t => t.Vehicle)
+            builder.Property(t => t.VehicleId)
                    .IsRequired();
 
             builder.Property(t => t.StartDateTime)
