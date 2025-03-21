@@ -30,7 +30,7 @@ namespace AlibabaClone.Infrastructure.Configurations.TransactionConfigurations
                    .IsRequired()
                    .HasColumnType("decimal(18,2)");
 
-            builder.Property(c => c.Descrption)
+            builder.Property(c => c.Description)
                 .IsRequired()
                 .HasMaxLength(255)
                 .IsUnicode(false);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlibabaClone.Domain.Aggregates.AccountsAggregates
 {
-    public class Role : Framework.Base.Entity<byte>
+    public class Role : Framework.Base.Entity<short>
     {
         public Role() { }
 

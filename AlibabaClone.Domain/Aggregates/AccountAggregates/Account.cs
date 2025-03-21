@@ -16,6 +16,7 @@ namespace AlibabaClone.Domain.Aggregates.AccountsAggregates
         public string? Email { get; set; }
 
         public virtual Person? Person { get; set; }
+        public virtual ICollection<TransportationAggregates.Ticket>? BoughtTickets { get; set; }
         public virtual ICollection<TransactionAggregates.Coupon>? Coupons { get; set; }
     }
 }

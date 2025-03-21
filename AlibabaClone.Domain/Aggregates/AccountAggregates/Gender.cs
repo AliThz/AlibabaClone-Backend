@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace AlibabaClone.Domain.Aggregates.AccountsAggregates
 {
-    public class Gender : Framework.Base.Entity<byte>
+    public class Gender : Framework.Base.Entity<short>
     {
         public Gender() {    }
 
-        public string Title { get; set; }
+        public required string Title { get; set; }
     }
 }

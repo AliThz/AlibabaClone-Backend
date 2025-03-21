@@ -21,5 +21,6 @@ namespace AlibabaClone.Domain.Aggregates.AccountsAggregates
 
         public virtual Gender Gender { get; set; }
         public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<TransportationAggregates.Ticket> TraveledTickets { get; set; }
     }
 }
