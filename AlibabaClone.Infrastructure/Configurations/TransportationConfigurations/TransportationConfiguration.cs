@@ -60,24 +60,14 @@ namespace AlibabaClone.Infrastructure.Configurations.TransportationConfiguration
                    .HasForeignKey(t => t.ToLocationId)
                    .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne(t => t.Buyer)
-                   .WithMany(a => a.BoughtTickets)
-                   .HasForeignKey(t => t.BuyerId)
+            builder.HasOne(t => t.Company)
+                   .WithMany(c => c.Transportations)
+                   .HasForeignKey(t => t.CompanyId)
                    .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne(t => t.Traveler)
-                   .WithMany(p => p.TraveledTickets)
-                   .HasForeignKey(t => t.TravelerId)
-                   .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasOne(t => t.Companion)
-                   .WithMany()
-                   .HasForeignKey(t => t.CompanionId)
-                   .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasOne(t => t.TicketStatus)
-                   .WithMany()
-                   .HasForeignKey(t => t.TicketStatusId)
+            builder.HasOne(t => t.Vehicle)
+                   .WithMany(v => v.Transportations)
+                   .HasForeignKey(t => t.VehicleId)
                    .OnDelete(DeleteBehavior.Restrict);
         }
     }
