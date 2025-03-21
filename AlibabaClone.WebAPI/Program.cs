@@ -1,3 +1,4 @@
+using AlibabaClone.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AlibabaCloneDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Development")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -17,12 +21,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-builder.Services.AddDbContext<AlibabaClone.Infrastructure.AlibabaCloneDbContext>(option =>
-{
-    option.UseSqlServer(builder.Configuration.GetConnectionString("Development"));
-
-});
 
 app.UseHttpsRedirection();
 
