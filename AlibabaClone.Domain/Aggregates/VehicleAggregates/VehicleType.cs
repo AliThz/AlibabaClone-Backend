@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlibabaClone.Domain.Aggregates.VehicleAggregates
 {
-    public class VehicleType : Framework.Base.Entity<byte>
+    public class VehicleType : Framework.Base.Entity<short>
     {
         public VehicleType() { }
 
