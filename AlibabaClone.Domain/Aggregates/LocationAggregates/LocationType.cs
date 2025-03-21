@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlibabaClone.Domain.Aggregates.LocationAggregates
 {
-    public class LocationType : Framework.Base.Entity<byte>
+    public class LocationType : Framework.Base.Entity<short>
     {
         public LocationType() {    }
 

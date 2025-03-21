@@ -14,6 +14,12 @@ namespace AlibabaClone.Domain.Aggregates.TransportationAggregates
         public Guid ToLocationId { get; set; }
         public Guid CompanyId { get; set; }
         public Guid VehicleId { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
+        public string SerialNumber { get; protected set; }
+        public int RemainingCapacity { get; protected set; }
+        public decimal BasePrice { get; set; }
+        public decimal? VIPPrice { get; set; }
 
         public virtual LocationAggregates.Location FromLocation { get; set; }
         public virtual LocationAggregates.Location ToLocation { get; set; }

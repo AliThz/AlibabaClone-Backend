@@ -12,7 +12,7 @@ namespace AlibabaClone.Domain.Aggregates.VehicleAggregates
         public Vehicle() { }
 
         public required string Title { get; set; }
-        public byte VehicleTypeId { get; set; }
+        public short VehicleTypeId { get; set; }
         public int Capacity { get; set; }
         public required string PlateNumber { get; set; }
 
