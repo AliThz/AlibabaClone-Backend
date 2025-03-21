@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+builder.Services.AddDbContext<AlibabaClone.Infrastructure.AlibabaCloneDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("Development"));
+
+});
 
 app.UseHttpsRedirection();
 
