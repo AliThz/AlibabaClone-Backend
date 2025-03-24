@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Framework\Interfaces\Repositories\" />
     <Folder Include="Enums\" />
     <Folder Include="Factories\" />
   </ItemGroup>
